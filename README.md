@@ -5,7 +5,7 @@ This is a barebones re-implementation of Unix's [tail](https://en.wikipedia.org/
 We make 3 simple assumptions:
 1. The file being passed is valid. (Why would you want to print an invalid file eh?).
 2. You're able to compile and run this program (see instructions below).
-3. Zero assumptions about the file length or the length of lines in the given file. Both can be arbitrarily long (or short?).
+3. Zero assumptions about the file length or the length of lines in the file. Both can be arbitrarily long (or **short?**).
 
 # Algorithm
 The key to making this possible is our use of [linked lists](https://en.wikipedia.org/wiki/Linked_list). In our context, each line in the file is a node (in the list), with each node pointing to the next node (which contains a different line in the file). And now the algorithm! Given a valid file:
