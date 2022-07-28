@@ -11,7 +11,7 @@ We make 3 simple assumptions:
 The key to making this possible is our use of [linked lists](https://en.wikipedia.org/wiki/Linked_list). In our context, each line in the file is a node (in the list), with each node pointing to the next node (which contains a different line in the file). And now the algorithm! Given a valid file:
 1. Open that file.
 2. Instantiate a node (to be used for the linked list).
-3. Iterate through the file, line by line, each time setting a new node to contain each line.
+3. Iterate through the file, line by line, each time setting a new node to contain each new line.
 4. Print node based on the param specified by the user. If the user doesn't specify this, we default to printing the last 5 lines.
 
 # Compile & Run Program
