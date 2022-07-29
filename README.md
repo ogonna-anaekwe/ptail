@@ -3,7 +3,7 @@ This is a barebones re-implementation of Unix's [tail](https://en.wikipedia.org/
 
 # Assumptions
 We make 3 simple assumptions:
-1. The file being passed is valid. (Why would you want to print an invalid file eh?).
+1. The file being passed is valid. (Why would you want to print an invalid file eh?)
 2. You're able to compile and run this program ([see instructions](https://github.com/ogonna-anaekwe/ptail#compile--run-program) below).
 3. Zero assumptions about the file length or the length of lines in the file. Both can be arbitrarily long (or *short?*).
 
