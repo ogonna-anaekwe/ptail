@@ -1,4 +1,4 @@
-# Unix's tail command reverse engineered.
+# Ptail
 This is a bare-bones re-implementation of Unix's [tail](https://en.wikipedia.org/wiki/Tail_(Unix)) command. Let's call it `ptail`. It's so simplistic that all it does is print the `tail` of a single given file. By default, it prints the last 5 lines in the file; however you may specify the number of lines you wish to print to bypass said default.
 
 # Assumptions
