@@ -37,7 +37,7 @@ struct node
 #define INPUT_BASE 10
 
 /**
- * Prints the tail of a file. E.g. If a file has 10 lines and you want to print the tail,
+ * Prints the tail of a file. Say a file has 10 lines and you want to print the tail,
  * we print the last 5 lines (i.e lines 6 to 10) by default. You can bypass this by passing the number of lines
  * you'd rather have printed.
  * @param file_path Path to file whose tail we want to print.
