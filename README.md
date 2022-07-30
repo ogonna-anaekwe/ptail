@@ -17,11 +17,11 @@ One key to making this work is our use of [linked lists](https://en.wikipedia.or
 # Compile & Run Program
 Compile with:
 ```sh
-make
+$ make
 ```
 Run with either:
 ```sh
-./ptail <file_path> 
-./ptail <file_path> 2
+$ ./ptail <file_path> 
+$ ./ptail <file_path> 2
 ```
 Change `2` to change the number of lines printed.
