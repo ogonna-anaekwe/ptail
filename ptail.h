@@ -30,7 +30,7 @@ struct node
     if (is_invalid)                                                                                                                                                                       \
     {                                                                                                                                                                                     \
         fprintf(stderr, "\"%s\" has %zd lines.\nSpecify that number (or less) and re-try.\nYou specified (or are using the default) %zd.\n", file_path, file_line_count, lines_to_print); \
-        exit(0);                                                                                                                                                                          \
+        exit(1);                                                                                                                                                                          \
     }; /* Checks that user isn't asking to print more lines than in the file. */
 
 #define DEFAULT 5
