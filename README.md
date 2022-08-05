@@ -12,7 +12,7 @@ One key to making this work is our use of [linked lists](https://en.wikipedia.or
 1. Open that file.
 2. Instantiate a node (to be used for the linked list).
 3. Iterate through the file, line by line, each time setting a new node to contain each new line.
-4. Iterate through list, printing nodes based on the line param specified by the user. If the user doesn't specify this, we default to printing the last 5 lines.
+4. Iterate through the list, printing nodes based on the line param specified by the user. If the user doesn't specify this, we default to printing the last 5 lines.
 
 # Compile & Run Program
 Compile with:

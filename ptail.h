@@ -19,18 +19,18 @@ struct node
 
 #define CHECK_MALLOC(ptr) assert(ptr != NULL); /* Checks that valid ptr (i.e. non-null) is returned. */
 
-#define CHECK_FILE(ptr)                                \
-    if (ptr == NULL)                                   \
-    {                                                  \
-        fprintf(stderr, "ptail: cannot open file.\n"); \
-        exit(1);                                       \
+#define CHECK_FILE(ptr, file_path)                             \
+    if (ptr == NULL)                                           \
+    {                                                          \
+        fprintf(stderr, "ptail: cannot open %s\n", file_path); \
+        exit(1);                                               \
     }; /* Checks that file path is valid and returns a valid file stream. */
 
-#define CHECK_REQUEST(is_invalid)                                                                                                                         \
-    if (is_invalid)                                                                                                                                       \
-    {                                                                                                                                                     \
-        printf("\"%s\" has %zd lines.\nSpecify that number (or less) and re-try.\nYou specified %zd.\n", file_path, file_line_count, lines_to_print + 1); \
-        exit(0);                                                                                                                                          \
+#define CHECK_REQUEST(is_invalid)                                                                                                                                                         \
+    if (is_invalid)                                                                                                                                                                       \
+    {                                                                                                                                                                                     \
+        fprintf(stderr, "\"%s\" has %zd lines.\nSpecify that number (or less) and re-try.\nYou specified (or are using the default) %zd.\n", file_path, file_line_count, lines_to_print); \
+        exit(0);                                                                                                                                                                          \
     }; /* Checks that user isn't asking to print more lines than in the file. */
 
 #define DEFAULT 5

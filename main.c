@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-    if (argc < 2 || argc > 3)
+    if (!(argc == 2 || argc == 3))
     {
         fprintf(stderr, "usage: ./ptail <file_path> <optional: num_of_lines_to_print>\n");
         exit(1);
