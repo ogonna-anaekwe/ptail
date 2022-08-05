@@ -34,7 +34,7 @@ void ptail(const char *file_path, long lines_to_print)
 
     bool invalid_line_requested = 0;
     invalid_line_requested = lines_to_print >= file_line_count; /* Asking to print more lines than are in the file */
-    CHECK_REQUEST(invalid_line_requested);
+    CHECK_REQUEST(invalid_line_requested, file_path, file_line_count, lines_to_print);
 
     while (lines_to_print >= 0)
     {

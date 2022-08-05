@@ -26,7 +26,7 @@ struct node
         exit(1);                                               \
     }; /* Checks that file path is valid and returns a valid file stream. */
 
-#define CHECK_REQUEST(is_invalid)                                                                                                                                                         \
+#define CHECK_REQUEST(is_invalid, file_path, file_line_count, lines_to_print)                                                                                                             \
     if (is_invalid)                                                                                                                                                                       \
     {                                                                                                                                                                                     \
         fprintf(stderr, "\"%s\" has %zd lines.\nSpecify that number (or less) and re-try.\nYou specified (or are using the default) %zd.\n", file_path, file_line_count, lines_to_print); \
