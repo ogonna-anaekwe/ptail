@@ -26,8 +26,8 @@ void ptail(const char *file_path, long lines_to_print)
 
         if (list != NULL)
         {
-            new_node->next_line = list; /* Link new node to existing node. This is the pointer to the next node. */
-            list->prev_line = new_node; /* Link existing node to new node. This is the pointer to the previous node. */
+            new_node->next_line = list; /* Link new node to list. This is the pointer to the next node. */
+            list->prev_line = new_node; /* Link list node. This is the pointer to the previous node. */
             new_node->prev_line = head;
         }
         else
@@ -66,7 +66,7 @@ void ptail(const char *file_path, long lines_to_print)
             break;
         }
         list = list->next_line;
-        lines_to_print--; /* Decrement each time we step through the node. This will eventually help set the node to the point from which we can start printing the prev_line's line */
+        lines_to_print--; /* Decrement each time we step through the list. This will eventually help set the list to the point from which we can start printing the prev_line's line */
     }
 
     free(list); /* All mallocs were re-assigned to this node. Only this needs freeing as the original mallocs were freed upon re-assignment */

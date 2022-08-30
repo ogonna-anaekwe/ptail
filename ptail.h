@@ -10,6 +10,7 @@
 
 /*
 Struct for the list of lines (in a file).
+This is a doubly linked list.
 */
 struct node
 {
@@ -32,9 +33,9 @@ struct node
     {                                                                                                                                                                                     \
         fprintf(stderr, "\"%s\" has %zd lines.\nSpecify that number (or less) and re-try.\nYou specified (or are using the default) %zd.\n", file_path, file_line_count, lines_to_print); \
         exit(1);                                                                                                                                                                          \
-    }; /* Checks that user isn't asking to print more lines than in the file. */
+    }; /* Checks that user isn't asking to print more lines than the file has. */
 
-#define DEFAULT 5
+#define DEFAULT 5 /* Number of lines to print (if the user doesn't specify the number of lines to print) */
 #define INPUT_BASE 10
 
 /**
