@@ -7,5 +7,5 @@ all: ptail
 clean:
 	rm -rf ptail *.o
 
-ptail: main.c ptail.h
+ptail: main.c ptail.*
 	$(CC) -o ptail main.c ptail.c $(FLAGS)

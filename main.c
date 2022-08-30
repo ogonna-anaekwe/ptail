@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     }
 
     char *file_path = argv[1];
-    ssize_t num_of_lines = argc == 2 ? DEFAULT : strtol(argv[2], NULL, INPUT_BASE) - 1;
+    ssize_t num_of_lines = argc == 2 ? DEFAULT : strtol(argv[2], NULL, INPUT_BASE);
 
     ptail(file_path, num_of_lines);
     return 0;

@@ -8,11 +8,16 @@ We make 3 simple assumptions:
 3. Zero assumptions about the file length or the length of lines in the file. Both can be arbitrarily long (or *short?*)
 
 # Algorithm
-One key to making this work is our use of [linked lists](https://en.wikipedia.org/wiki/Linked_list). In our context, each line in the file is a node (in the list), with each node pointing to the next node (which contains the next line in the file). And now the algorithm! Given a valid file:
+One key to making this work is our use of [doubly linked lists](https://en.wikipedia.org/wiki/Linked_list#Doubly_linked_list). In our context, each line in the file is a node (in the list). And now the algorithm! Given a valid file:
 1. Open that file.
-2. Instantiate a node (to be used for the linked list).
-3. Iterate through the file, line by line, each time setting a new node to contain each new line.
-4. Iterate through the list, printing nodes based on the line param specified by the user. If the user doesn't specify this, we default to printing the last 5 lines.
+2. Instantiate a node (to be used for the list).
+3. Iterate through the file, line by line, each time creating a new node and setting the new node to:
+    * contain each new line.
+    * point to the next node (i.e. the next line in the file).
+    * point to the previous node (i.e. the previous line in the file).
+4. Insert the new node into the list. 
+5. Continue `3-4` until the end of the file is reached (or worse, an error occurs).
+6. Iterate through the list, printing nodes based on the line param specified by the user. If the user doesn't specify this, we default to printing the last 5 lines.
 
 # Compile & Run Program
 Compile with:

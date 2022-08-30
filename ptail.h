@@ -13,6 +13,7 @@ Struct for the list of lines (in a file).
 */
 struct node
 {
+    struct node *prev_line;
     char *line;
     struct node *next_line;
 };
