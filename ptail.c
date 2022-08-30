@@ -4,6 +4,7 @@ void ptail(const char *file_path, long lines_to_print)
 {
     char *mode = "r",
          *line_ptr = NULL;
+
     FILE *fp = fopen(file_path, mode);
     CHECK_FILE(fp, file_path);
 
